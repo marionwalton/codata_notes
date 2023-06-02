@@ -1,8 +1,8 @@
-terms="democratic alliance"
+terms="search_term"
 ad_type="ad_type=POLITICAL_AND_ISSUE_ADS"
 field_terms="['ad_creation_time','ad_delivery_start_time','ad_delivery_stop_time','ad_creative_bodies','page_id','page_name','currency','spend','demographic_distribution','bylines','impressions','delivery_by_region']"
 fields="fields=$field_terms"
-access_token="access_token=EAAW0ZBzTW1A4BADxpjxJCyAq4FGrAMKK2o33arj5SGYh0ZCNhhYKIQadF1LbTVC52dknX7TevBkWyC0A0027DhAoZCSiPmBItqknRoS7CyFcdT4l0PHzrQPATGDjSwqMTF4HfSSDeIkiU27ZC3MvYPhu43pTjGakWPD6kU42ZAaU6elD8z0UaqoQ8xvI6DmTFPSXcTYZABdnh7R9eMl4FOxPFtJNzsUsj1LNM5eMJpynI8d7ZA5rpVbKnLabKS81RkZD"
+access_token="access_token=TOKEN_GOES_HERE"
 #['ZA','US']
 ad_reached_countries="ad_reached_countries=['ZA']"
 south_africa_only=true;
