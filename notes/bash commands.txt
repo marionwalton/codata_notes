@@ -1,0 +1,90 @@
+pwd //display present working directory
+ls //list files in dir
+ls -F //list also shows executables and links
+clear //clear screen
+Up and down arrows //cycle through previous commands
+ls --help //help
+man ls //help pages about ls
+n or shift-n // to page through help pages
+q to quit //help pages
+ls -l //show date 
+ls -r //list content of directory in reverse order
+ls -t //ordered by the last changed date
+ls -l -r -t //ordered by last changed date in reverse order with date showing
+ls -F Desktop/data-shell //shows files in that folder
+cd Desktop //changes working directory to that folder
+cd .. //change to parent dir
+ls -F -a //show special (dot) directories
+ls -Fa //short form to show special dot
+cd //with no arguments takes you to home directory 
+ls -F /Users/username/Desktop //full details with absolute path
+ls -F ~/Desktop/shell-lesson-data/ //tilde refers to user's home directory 
+cd //go back to previous directory you were in
+mkdir //makes new directory
+mkdir -p project/data_project/results
+ls -FR project //recursively gives folder structure
+mkdir -p project/project1/data project/project2/data //Creates two project paths in one command
+//Naming - don't use spaces, they are used to separate arguments
+//Never start a file or dir with a dash, don't use special chars
+mkdir "beta project" //if you want to use a space
+nano draft.txt //creates new text file with nano text editor
+Ctrl o //output the file
+Ctrl x //exit
+touch my_file.txt //creates empty file
+mv thesis/draft.txt thesis/quotes.txt //NB will overwrite any existing file
+mv -i thesis/bib.txt thesis/quotes.txt //Checks before overwriting
+mv thesis/quotes.txt . //Dot refers to current dir
+//Use tab to complete directory name
+cp quotes.txt thesis/quotations.txt //copy
+cp -r thesis thesis_backup //recursive copy - dir and all contents
+
+rm quotes.txt //remove 
+rm -i quotes.txt //interactive - confirm before removal
+rm -r -i thesis //removes recursively and ask to confirm removal
+ls *.pdb //any pdb file
+ls ?ethane.pdb //matches anything that has a char followed this suffix (can't be an exact match)
+Ls ???ane.pdb  //matches anything that has three characters followed by this suffix (can't be an exact match)
+wc cubane.pdb //wordcount, characters, lines
+wc *.pdb // for all pub files in dir
+wc -l *.pdb //just number of lines
+Wc -c *.pdb //characters or -w words
+Ctrl c //to get the command unstuck
+> //redirects output to a file
+wc -l *.pdb > length.txt //outputs the length of a whole set of files to a new file
+cat length.txt //display content of file on the screen
+less length.txt //displays one page at a time, up and down arrows to scroll, q to quit
+sort //sort alphanumerically
+sort -n //sort numerically
+head -n 1 sorted-lengths.txt //first line of file
+head -n 2 sorted-lengths.txt //first two lines of file
+NB: Don't pipe from one file to the same file - unix allows it but it's a very bad idea!
+echo hello > testfile01.txt //writes to the file but overwrites it every time
+echo hello >> testfile01.txt //writes by appending to the end of the file
+sort -n lengths.txt | head -n 1 //sorts and selects the first one
+wc -l *.pdb | sort -n | head -n 1 //gets the word count for all files, pipes it to sort, selects first one
+Similar to water pipes, string of input filtered and create a stream of output, large number of commands that perform very small tasks
+cut -d , -f 2 animals.csv //split csv file by comma delimiter to select second column
+cut -d , -f 2 animals.csv | sort | //uniq sorts and removes any duplicates
+cut -d , -f 2 animals.csv | sort | uniq -c //also counts duplicates
+ls *[AB].txt //select all files that end with A.txt or B.txt
+Grep prints lines in file that match specific pattern
+grep not haiku.txt //find lines within this file that contain the words not
+grep The haiku.txt //will match anything e.g. The, Thesis
+grep -w The haiku.txt //-w only full word match (word boundary is beginning and end of the line as well as spaces)
+grep -w "is not" haiku.txt // " " searches for that exact pattern. Good practice to always use quotes
+grep -n "it" haiku.txt //-n shows line number
+grep -n -w -i "the" haiku.txt //-i gives a case insensitive match
+grep -n -w -i -v "The" haiku.txt // -v inverts the search and returns lines which don't contain "the"
+grep -r Yesterday . //searches recursively (in current dir) ?current dir seems to be default?
+grep --color -r Yesterday . //visual highlight on word
+grep --help //takes you to help summary
+usage: grep [-abcdDEFGHhIiJLlMmnOopqRSsUVvwXxZz] [-A num] [-B num] [-C[num]]
+	[-e pattern] [-f file] [--binary-files=value] [--color=when]
+	[--context[=num]] [--directories=action] [--label] [--line-buffered]
+	[--null] [pattern] [file ...]
+man grep //full help page
+find //finds files themselves
+//HPC
+ssh //log in to the head node of the cluster 
+qsub//submits a job to queue scheduler
+
