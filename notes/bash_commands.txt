@@ -91,6 +91,9 @@ git status //show status of repo
 git add //files put into the staging area
 git commit // saves content from staged area as new commit
 git commit -m myfile.txt "my recent changes" //message to describe change
+git diff HEAD~3 myfile.txt //shows differences between older commits
+git show HEAD~3 myfile.txt //shows previous change
+git checkout HEAD myfile.txt //restores older version of file (puts it back the way it was)
 //HPC
 ssh //log in to the head node of the cluster 
 qsub//submits a job to queue scheduler
