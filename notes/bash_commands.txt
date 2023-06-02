@@ -84,6 +84,13 @@ usage: grep [-abcdDEFGHhIiJLlMmnOopqRSsUVvwXxZz] [-A num] [-B num] [-C[num]]
 	[--null] [pattern] [file ...]
 man grep //full help page
 find //finds files themselves
+//Git
+git init //initialise repository
+.git //directory used to store repo data
+git status //show status of repo
+git add //files put into the staging area
+git commit // saves content from staged area as new commit
+git commit -m myfile.txt "my recent changes" //message to describe change
 //HPC
 ssh //log in to the head node of the cluster 
 qsub//submits a job to queue scheduler
