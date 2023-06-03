@@ -84,15 +84,20 @@ usage: grep [-abcdDEFGHhIiJLlMmnOopqRSsUVvwXxZz] [-A num] [-B num] [-C[num]]
 	[--null] [pattern] [file ...]
 man grep //full help page
 find //finds files themselves
-//Git
+//GIT
 git init //initialise repository
 .git //directory used to store repo data
+USE WITH CAUTION rm -rf mydirectory/.git //removes the git repository
 git status //show status of repo
 git add //files put into the staging area
 git commit // saves content from staged area as new commit
 git commit -m myfile.txt "my recent changes" //message to describe change
-git diff HEAD~3 myfile.txt //shows differences between older commits
-git show HEAD~3 myfile.txt //shows previous change
+git diff myfile.txt // shows difference created by most recent commit
+git diff HEAD myfile.txt //shows difference created by most recent commit
+git diff HEAD~1 myfile.txt //shows differences created by 2nd last commit
+git show HEAD~3 myfile.txt //shows differences created by 4th last commit
+git diff HEAD~2 HEAD~1 //shows difference between these two commits
+git diff HEAD~2 1a1a1a1 2b2b2b2 //uses specific identifiers to see diff between two commits 
 git checkout HEAD myfile.txt //restores older version of file (puts it back the way it was)
 //HPC
 ssh //log in to the head node of the cluster 
