@@ -93,13 +93,18 @@ git add //files put into the staging area
 git commit // saves content from staged area as new commit
 git commit -m myfile.txt "my recent changes" //message to describe change
 git diff myfile.txt // shows difference created by most recent commit
+git diff --color-words //highlights changes in colour
+git diff b9b1bad 4e37dfd 100644
+git diff 100644 4e37dfd 
+git diff 4e37dfd b9b1bad 
 git diff HEAD myfile.txt //shows difference between file & most recent commit
 git diff HEAD~1 myfile.txt //shows difference between file & 2nd last commit
 git show HEAD~3 myfile.txt //shows details of 4th last commit, who created etc.
-git diff HEAD~2 HEAD~1 -- myfile.txt//shows difference between these two commits
-git diff 1a1a1a1 2b2b2b2 //uses specific identifiers to see diff between two commits 
+git diff HEAD~1 HEAD -- myfile.txt//shows difference between these two commits
+git diff 2b2b2b2 1a1a1a1 -- myfile.txt//uses specific identifiers to see diff between two commits 
 git checkout HEAD myfile.txt //restores last saved commit (puts the file back the way it was)
 git checkout -b 3c3c3c3 myfile.txt // starts new branch from last prev version f22b25e
+git checkout main //returns head to 
 //HPC
 ssh //log in to the head node of the cluster 
 qsub//submits a job to queue scheduler
