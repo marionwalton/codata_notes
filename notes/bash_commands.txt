@@ -97,7 +97,7 @@ git diff HEAD myfile.txt //shows difference created by most recent commit
 git diff HEAD~1 myfile.txt //shows differences created by 2nd last commit
 git show HEAD~3 myfile.txt //shows differences created by 4th last commit
 git diff HEAD~2 HEAD~1 //shows difference between these two commits
-git diff HEAD~2 1a1a1a1 2b2b2b2 //uses specific identifiers to see diff between two commits 
+git diff 1a1a1a1 2b2b2b2 //uses specific identifiers to see diff between two commits 
 git checkout HEAD myfile.txt //restores older version of file (puts it back the way it was)
 //HPC
 ssh //log in to the head node of the cluster 
