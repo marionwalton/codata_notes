@@ -115,6 +115,10 @@ nano .gitignore //create a text file saying which files should not be tracked
 git add .gitignore //track this file w git so that others following your project can do the same
 git add -f file.dat //forces override of settings in gitignore
 git status --ignored //checks which files are being ignored
+git remote add origin git@github.com:username/folder.git //connects repo via ssh to repo url copied from github
+git remote -v //checks your remote repository is set up
+ls -al ~/.ssh //check whether ssh is set up on your computer
+
 
 //HPC
 ssh //log in to the head node of the cluster 
