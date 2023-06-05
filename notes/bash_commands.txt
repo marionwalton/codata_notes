@@ -118,7 +118,8 @@ git status --ignored //checks which files are being ignored
 git remote add origin git@github.com:username/folder.git //connects repo via ssh to repo url copied from github
 git remote -v //checks your remote repository is set up
 ls -al ~/.ssh //check whether ssh is set up on your computer
-
+git push origin main //updates local commits to github repository
+git pull origin main //updates local repository with remote commits from github
 
 //HPC
 ssh //log in to the head node of the cluster 
